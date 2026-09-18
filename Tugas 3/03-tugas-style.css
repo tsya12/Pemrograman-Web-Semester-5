@@ -111,3 +111,30 @@ a{
   gap: 8px;
   position: relative;
 }
+
+.card__badge {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #12324a;
+  background: #cfe3e6;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.card__badge--live {
+  background: #f6d8d5;
+  color: #8a2a20;
+}
+
+.card__title {
+  font-size: 1.1rem;
+  color: #12324a;
+}
+
+.card__meta {
+  font-size: 0.85rem;
+  color: #6b7d85;
+}
