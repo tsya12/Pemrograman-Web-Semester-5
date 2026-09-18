@@ -55,3 +55,13 @@ a{
     max-width: 960px;
     margin: 0 auto;
 }
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;               /* sudut melengkung */
+  box-shadow: 0 4px 14px rgba(18, 50, 74, 0.12); /* bayangan */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease; /* transisi lembut */
+}
