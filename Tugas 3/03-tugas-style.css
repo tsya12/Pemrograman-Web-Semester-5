@@ -57,11 +57,23 @@ a{
 }
 
 .card {
-  background: #ffffff;
-  border-radius: 16px;               /* sudut melengkung */
-  box-shadow: 0 4px 14px rgba(18, 50, 74, 0.12); /* bayangan */
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.25s ease, box-shadow 0.25s ease; /* transisi lembut */
+    background: #ffffff;
+    border-radius: 16px;               /* sudut melengkung */
+    box-shadow: 0 4px 14px rgba(18, 50, 74, 0.12); /* bayangan */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease; /* transisi lembut */
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(18, 50, 74, 0.2);
+}
+
+
+.card__poster {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #dbe6e8;
 }
