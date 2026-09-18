@@ -92,3 +92,13 @@ a{
   flex-direction: column;
   gap: 10px;
 }
+
+.card__video {
+  width: 100%;
+  border-radius: 8px;
+  background: #000;
+}
+
+.card__audio {
+  width: 100%;
+}
