@@ -29,3 +29,10 @@ body {
 a{
     color: inherit;
 }
+
+
+.page-header {
+    max-width: 900px;
+    margin: 0 auto 32px;
+    text-align: center;
+}
