@@ -77,3 +77,18 @@ a{
   aspect-ratio: 16 / 9;
   background: #dbe6e8;
 }
+
+.card__poster-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.card__media {
+  background: #0d1f2d;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
