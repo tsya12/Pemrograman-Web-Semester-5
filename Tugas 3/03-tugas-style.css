@@ -1,0 +1,31 @@
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+img,
+picture,
+video,
+audio {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: "segoe UI", arial, sans-serif;
+    background: #f2f5f6;
+    color: #1b2b34;
+    line-height: 1.6;
+    padding: 32px 16px 64px;
+}
+
+a{
+    color: inherit;
+}
