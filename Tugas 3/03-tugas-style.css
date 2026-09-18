@@ -46,3 +46,12 @@ a{
     margin-top: 6px;
     color: #4a5f68;
 }
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+    max-width: 960px;
+    margin: 0 auto;
+}
