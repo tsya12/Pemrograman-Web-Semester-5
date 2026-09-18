@@ -138,3 +138,26 @@ a{
   font-size: 0.85rem;
   color: #6b7d85;
 }
+
+.card__description {
+  font-size: 0.95rem;
+  color: #333333;
+}
+
+.card__description code {
+  background: #eef4f5;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+
+@media (max-width: 480px) {
+  .card__body {
+    padding: 14px 16px 18px;
+  }
+
+  .card__title {
+    font-size: 1rem;
+  }
+}
