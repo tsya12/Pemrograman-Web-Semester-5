@@ -109,3 +109,21 @@ body {
 .layout__main {
     min-width: 0;
 }
+
+
+@media (min-width: 768px) {
+    .layout {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .layout__aside {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+    }
+
+    .layout__aside .widget + .widget {
+        margin-top: 20px;
+    }
+}
