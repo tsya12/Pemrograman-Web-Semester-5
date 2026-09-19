@@ -33,3 +33,10 @@ body {
     margin: 0 auto;
     padding: 16px 24px;
 }
+
+.navbar-custom__brand {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
