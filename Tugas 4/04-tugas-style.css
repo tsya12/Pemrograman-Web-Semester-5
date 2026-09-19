@@ -17,3 +17,19 @@ body {
     color: #1b2b34;
     font-family: "Segoe UI", Arial, sans-serif;
 }
+
+
+.site-header {
+    background: var(--biru-tua);
+}
+
+.navbar-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+}
