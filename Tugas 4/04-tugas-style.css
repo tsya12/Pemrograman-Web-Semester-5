@@ -127,3 +127,24 @@ body {
         margin-top: 20px;
     }
 }
+
+
+.sidebar-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-list a{
+    color: #33484f;
+    text-decoration: none;
+    font-size: 0.92rem;
+}
+
+.sidebar-list a:hover {
+    color: var(--teal);
+    text-decoration: underline;
+}
