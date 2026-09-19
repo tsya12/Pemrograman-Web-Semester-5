@@ -40,3 +40,11 @@ body {
     font-size: 1.1rem;
     text-decoration: none;
 }
+
+.navbar-custom__menu {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+    margin:0;
+    padding: 0;
+}
