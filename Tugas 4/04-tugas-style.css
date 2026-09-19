@@ -64,3 +64,17 @@ body {
     color: #ffffff;
     border-bottom-color: var(--teal);
 }
+
+
+@media (max-width: 575.98px){
+    .navbar-custom{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-custom__menu{
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+}
