@@ -148,3 +148,14 @@ body {
     color: var(--teal);
     text-decoration: underline;
 }
+
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.article-grid .card-title {
+    color: var(--biru-tua);
+}
