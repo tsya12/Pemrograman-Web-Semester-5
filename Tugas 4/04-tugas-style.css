@@ -88,3 +88,24 @@ body {
     margin: 0 auto;
     padding: 28px 20px 60px;
 }
+
+.layout__heading {
+    font-size: 1.1rem;
+    color: var(--biru-tua);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--teal);
+}
+
+.layout__sidebar,
+.layout__aside {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    align-self: start;
+}
+
+.layout__main {
+    min-width: 0;
+}
