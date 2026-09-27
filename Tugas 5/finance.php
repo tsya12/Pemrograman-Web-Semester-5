@@ -20,3 +20,14 @@ $_SESSION['history'] ??= [];
 if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
+
+//Fungsi bantu
+function e(string $value): string 
+{
+    return htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+}
+
+function rupiah(float $value): string 
+{
+    return 'Rp ' . number_format($value, 2, ',', '.');
+}
