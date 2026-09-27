@@ -113,4 +113,58 @@ $history = array_reverse($_SESSION['history']);
         </style>
     </head>
 
-    
+    <body>
+        <h1>Manajemen Keuangan Sederhana</h1>
+
+        <?php if (is_array($flash)): ?>
+            <p class="<?= e($flash[0] === 'ok' : 'error') ?>"><?= e((string) $flash[1]) ?></p>
+        <?php endif; ?>
+
+        <div class="card">
+            <div>Sisa saldo</div>
+            <div class="saldo"><?= e(rupiah($balance)) ?></div>
+        </div>
+
+        <div class="card">
+            <h2>Transaksi Baru</h2>
+            <form method="post" action="" autocomplete="off">
+                <input type="hidden" name="csrf_token" value="<?= e($_SESSION['csrf_token']) ?>">
+
+                <label for="type">Jenis transaksi</label>
+                <select id="type" name="type" required>
+                    <option value="deposit">Deposit</option>
+                    <option value="withdraw">Penarikan</option>
+                </select>
+
+                <label for="amount">Jumlah</label>
+                <input id="amount" name="amount" type="text" inputmode="decimal"
+                    placeholder="contoh: 150000.50" required>
+
+                <button type="submit">Proses</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Riwayat Transaksi</h2>
+            <?php if ($history === []): ?>
+                <p>Belum ada transaksi.</p>
+            <?php else: ?>
+                <table>
+                    <thead>
+                        <tr><th>ID</th><th>Jenis</th><th>Jumlah</th><th>Waktu</th></tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($history as $row): ?>
+                        <tr>
+                            <td><?= e((string) $row['id']) ?></td>
+                            <td><?= e($row['type'] === 'deposit' ? 'Deposit' : 'Penarikan') ?></td>
+                            <td><?= e(rupiah((float) $row['amount'])) ?></td>
+                            <td><?= e((string) $row['time']) ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            <?php endif; ?>
+        </div>
+    </body>
+</html>
