@@ -92,3 +92,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 $balance = (float) $_SESSION['balance'];
 $history = array_reverse($_SESSION['history']);
 ?>
+
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sistem Manajemen Keuangan Sederhana</title>
+        <style>
+            body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; color: #222; }
+            .card { border: 1px solid #ddd; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.25rem; }
+            label { display: block; margin: .5rem 0 .25rem; font-weight: 600; }
+            input, select, button { padding: .5rem; font-size: 1rem; width: 100%; box-sizing: border-box; }
+            button { margin-top: 1rem; cursor: pointer; }
+            table { width: 100%; border-collapse: collapse; }
+            th, td { text-align: left; padding: .4rem; border-bottom: 1px solid #eee; }
+            .ok { background: #e6f6ea; color: #17692f; padding: .6rem; border-radius: 6px; }
+            .error { background: #fdecec; color: #a12222; padding: .6rem; border-radius: 6px; }
+            .saldo { font-size: 1.6rem; font-weight: 700; }
+        </style>
+    </head>
+
+    
