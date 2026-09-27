@@ -41,4 +41,18 @@ class Transaction
             default => throw new InvalidArgumentException('Jenis transaksi tidak valid.'),
         };
     }
+
+    /**
+     * @return array{id: string, type: string, amount: float, time: string}
+     */
+
+    public function toArray(): array
+    {
+        return [
+            'id'    => $this->id,
+            'type'  => $this->type,
+            'amount'=> $this->amount,
+            'time'  -> date('Y-m-d H:i:s'),
+        ];
+    }
 }
