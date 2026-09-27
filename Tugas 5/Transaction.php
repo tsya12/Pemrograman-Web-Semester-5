@@ -24,4 +24,21 @@ class Transaction
     {
         return $this->amount;
     }
+
+    /**
+     * @throws RuntimeException        jika saldo tidak mencukupi
+     * @throws InvalidArgumentException jika jenis transaksi tidak dikenal
+     */
+    public function process(): void 
+    {
+        $balance = (float) ($_SESSION['balance'] ?? 0.0);
+
+        $_SESSION['balance'] = match ($this->type) {
+            'deposit' => round($balance + $this->amount, 2),
+            'withdraw' => $balance >= $this->amount 
+                ? round($balance - $this->amount, 2)
+                : throw new RuntimeException('Saldo tidak mencukupi untuk penarikan.'),
+            default => throw new InvalidArgumentException('Jenis transaksi tidak valid.'),
+        };
+    }
 }
