@@ -82,4 +82,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         $_SESSION['flash'] = ['error', implode(' ', $errors)];
     }
+
+    //Perbarui token setelah setiap pengiriman formulir, lalu redirect
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    header('Location: ' . strtok($_SERVER['REQUEST_URI'], '?'));
+    exit;
 }
+
+$balance = (float) $_SESSION['balance'];
+$history = array_reverse($_SESSION['history']);
+?>
