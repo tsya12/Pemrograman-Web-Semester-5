@@ -15,3 +15,8 @@ header("Content-Security-Policy: default-src 'self'; style-src 'unsafe-inline'")
 
 $_SESSION['balance'] ??= 0.0;
 $_SESSION['history'] ??= [];
+
+//Token CSRF disimpan di sesi
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
