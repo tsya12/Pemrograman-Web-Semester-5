@@ -21,4 +21,33 @@ class GuestBook
         ];
         return new PDO($dsn, $user, $pass, $options);
     }
+
+    public static function validate(string $nama, string $email, string $pesan): array
+    {
+        $errors = [];
+
+        $nama  = trim($nama);
+        $email = trim($email);
+        $pesan = trim($pesan);
+
+        if ($nama === '') {
+            $errors['nama'] = 'Nama tidak boleh kosong.';
+        } elseif (mb_strlen($nama) > 100) {
+            $errors['nama'] = 'Nama maksimal 100 karakter.';
+        }
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $errors['email'] = 'Format email tidak valid.';
+        } elseif (mb_strlen($email) > 150) {
+            $errors['email'] = 'Email maksimal 150 karakter.';
+        }
+
+        if (mb_strlen($pesan) < 5) {
+            $errors['pesan'] = 'Pesan minimal 5 karakter.';
+        } elseif (mb_strlen($pesan) > 2000) {
+            $errors['pesan'] = 'Pesan maksimal 2000 karakter.';
+        }
+
+        return $errors;
+    }
 }
