@@ -8,7 +8,7 @@ const DB_NAME = 'perpustakaan_db';
 const DB_USER = 'root';
 const DB_PASS = '';
 
-require_once __DIR__ . 'Classes\GuestBook.php';
+require_once __DIR__ . 'D:\TISEM 5\web\Pemrograman-Web-Semester-5\Tugas 7\Classes\GuestBook.php';
 
 function e(string $text): string
 {
